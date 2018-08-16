@@ -68,7 +68,7 @@ Todos os módulos PAM geram um resultado de sucesso ou falha quando chamados. Si
 * `include` - Ao contrário dos outros controles, isso não está relacionado a como o resultado do módulo é tratado. Esse sinalizador puxa todas as linhas no arquivo de configuração que corresponde ao parâmetro fornecido e as anexa como um argumento para o módulo.
 
 ### module_name e module_arguments
-O nome do módulo fornece ao PAM o nome do módulo conectável que contém a interface do módulo especificada. O nome do diretório é omitido pois isso depende do sistema operacional onde ficam os módulos do pam. Por exemplo,
+O nome do módulo fornece ao PAM o nome do módulo conectável que contém a interface do módulo especificada. Esses módulos podem receber argumentos, que são passados na frente do módulo. Pode ser um arquivo, um banco de dados, entre outros. O nome do diretório é omitido pois isso depende do sistema operacional onde ficam os módulos do pam. Por exemplo,
 no Centos 7, esses módulos ficam em `/lib/security` ou `/lib64/security` (dependendo da arquitetura). É neste local que vamos colocar o nosso módulo `pam_cardard.so`.
 
 
