@@ -32,7 +32,7 @@ Baixe a plataforma [Arduino IDE](https://www.arduino.cc/en/Main/Software), abra 
 
 #
 ## Entendendo o sistema PAM do linux
-Todos os serviços que implementam o módulo PAM possuem uma área especial em `/etc/pam.d/`. Cada serviço implementa uma cadeia de módulos, que precisa ser seguida em order, o que impede que um módulo seja executado caso o usuário não consiga se authenticar no módulo anterior, se o mesmo tiver restrições. Estes módulos não são somente a autenticação, como toda parte funcional do usuário (terminal, permissões de acesso, etc.). 
+Todos os serviços que implementam o módulo PAM possuem uma área especial em `/etc/pam.d/`. Cada serviço implementa uma cadeia de módulos, que precisa ser seguida em ordem, o que impede que um módulo seja executado caso o usuário não consiga se authenticar no módulo anterior, se o mesmo tiver restrições. Estes módulos não são somente a autenticação, como toda parte funcional do usuário (terminal, permissões de acesso, etc.). 
 
 Com queremos implementar um novo método de acesso localmente em uma maquina, seja ela virtual ou real, vamos estudar e alterar o módulo de PAM do `login` que é o sistema de autenticação local do linux,
 
